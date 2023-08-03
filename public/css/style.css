@@ -1,0 +1,128 @@
+:root {
+    --medium-gap: 0.5rem;
+    --small-gap: calc(var(--medium-gap) / 2);
+    --very-small-gap: calc(var(--medium-gap) / 4);
+    --large-gap: calc(var(--medium-gap) * 2);
+    --very-large-gap: calc(var(--medium-gap) * 4);
+    --theme-blue: #00a4eb;
+    --theme-red: #eb004b;
+    --theme-green: #a4eba4;
+    --primary-white: #fefefe;
+    --secondary-white: #fdfdfd;
+    --tertiary-white: #fcfcfc;
+    --primary-grey: hwb(0 53% 47%);
+    --primary-black: #101010;
+    --secondary-black: #303030;
+    --tertiary-black: #505050;
+    --edge-radius: 2rem;
+    --border-size: 3px;
+    --offset-shadow: 10px 10px 0px 0px var(--primary-black);
+    --semi-offset-shadow: 4px 3px 0px 0px var(--primary-black);
+}
+
+@font-face {
+    font-family: Rounded;
+    src: url("../assets/fonts/rounded/MPLUSRounded1c-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-white);
+    font-family: Rounded;
+    color: var(--primary-black);
+}
+
+button {
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1;
+    padding: var(--small-gap);
+    border: var(--border-size) solid var(--primary-black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 3px 0px 0px var(--primary-black);
+}
+
+button:hover {
+    background-color: var(--primary-grey);
+}
+
+button svg {
+    background-color: transparent;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body h2 {
+    margin-bottom: var(--small-gap);
+}
+
+#panel {
+    min-width: 300px;
+    max-width: 300px;
+    padding: var(--large-gap);
+    border: var(--border-size) solid var(--primary-black);
+    border-radius: var(--edge-radius);
+    aspect-ratio: 1;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 10px 0px 0px var(--primary-black);;
+}
+
+#panel h1 {
+    font-size: 7rem;
+}
+
+#panel div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#panel button {
+    width: 25%;
+}
+
+#panel button span {
+    text-align: center;
+    background-color: transparent;
+    font-weight: bolder;
+    width: 50%;
+    font-size: xx-large;
+}
+
+#minus span {
+    color: var(--theme-red);
+}
+
+#add span {
+    color: var(--theme-green);
+}
+
+#theme-toggler {
+    width: 50px;
+    position: absolute;
+    bottom: var(--large-gap);
+    right: var(--large-gap);
+}
